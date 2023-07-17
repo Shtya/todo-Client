@@ -75,7 +75,7 @@ const Dashbord = () => {
 
   // Log Out
   useEffect(_ => {
-    localStorage.getItem("todouser") ? setuser(JSON.parse(localStorage.getItem("todouser"))) : null
+    if(localStorage.getItem("todouser")) setuser(JSON.parse(localStorage.getItem("todouser"))) 
   }, [])
 
   const handleOut = () => {
